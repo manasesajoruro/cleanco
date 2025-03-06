@@ -11,15 +11,29 @@
 	padding: 0.7rem 1rem;
 }
 
-.menu__btn {
+.header__menu-btn {
 	background-color: transparent;
 	border: none;
+	cursor: pointer;
 	
 }
 
-.menu__btn i {
+.header__menu-btn i {
 	color: var(--color-main);
 	font-size: 2.7rem;
+}
+
+/*oculta el icono*/
+.header__menu-icon--close {
+    display: none;
+}
+ /*Muestra el icono correcto segun el estado del popover*/
+#myMenu:popover-open + .header__menu-btn .header__menu-icon--open {
+    display: none;
+}
+
+#myMenu:popover-open + .header__menu-btn .header__menu-icon--close {
+    display: inline-block;
 }
 
 /*menu*/
